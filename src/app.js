@@ -1,100 +1,61 @@
-// create imports for all js related files
-import React, { Component } from "react";
-import Cards from "./components/Cards/Cards"
-import Head from "./components/Head/Head";
-import Wrapper from "./components/Wrapper/Wrapper";
-//import CardsJ from "../src/components/Cards/Cards.json";
+import React, { useState} from 'react';
+// import logo from './logo.svg';
+import cards from '../src/Cards.json';
+import Header from './components/Header/index';
+import Card from './components/Card/index';
+import Wrapper from './components/Wrapper/index';
+// import './App.css';
 
-class App extends Component {
-  state = {
-    Cards
-  };
 
-  removeCard = id => {
-    const Cards = this.state.Cards.filter(Card => Card.id !== id);
-    this.setState({ Cards });
-  };
+function App() {
 
-  render() {
-    return ( 
-      <Wrapper>
-        <Head>Cards List</Head>
-        {this.state.Cards.map(Card => (
-          <CardCard
-          removeCard={this.removeCard}
-          id={Card.id}
-          key={Card.id}
-          image={Card.image}
-          />
-        ))}
-      </Wrapper>
-    )
+  const [cardState, setCardState] = useState(cards);
+  const [pointsState, setPointsState] = useState(0);
+  const [topState, setTopState] = useState(0);
+
+
+function pageantCount(id) {
+   // eslint-disable-next-line
+  return cardState.find((v,i) => {
+    if (v.id === id) {
+      //if card clicked equals 0 then make it on clicked equal one so it is already a chosen id
+      if (cards[i].clicked === 0) {
+        cards[i].clicked = cards[i].clicked + 1;
+        setPointsState(pointsState +1)
+        setCardState(cardState.sort(() => Math.random() - 0.5))
+      } else {
+        if (pointsState > topState) {
+          setTopState(pointsState)
+        }
+        cardState.forEach(card => {
+          card.clicked = 0;  
+        });
+
+        //eslint-disable-next-line
+        alert('You got 1st runner up! \nscore: ${pointsState}');
+        setPointsState(0)
+        setCardState(cardState.sort(() => Math.random() - 0.5))
+      }
+      return true;
+      }
+    });
   }
+
+return (
+  <Wrapper>
+    <Header score={pointsState} highscore={topState}>Clicky Game</Header>
+    {cardState.map(card => (
+      <Card
+      pageantCount={pageantCount}
+        id={card.id}
+        key={card.id}
+        image={card.image}
+      /> 
+    ))}
+  </Wrapper>
+  );
 }
+
+
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function App () {
-
-// const [cardsState, setcardsState] = Component(cards); 
-// const [scoreState, setScoreState] = Component(0);
-// const [highScoreState, setHighScoreState] = Component(0);
-// const [answerState, setAnswerState] = Component("Click an image to start!")
-
-// function clickCount(id) {
-
-//     return cardsState.find((o, i) => {
-//       if (o.id === id) {
-//         if (cards[i].count === 0) {
-//           cards[i].count = cards[i].count + 1;
-//           setScoreState(scoreState + 1)
-//           setAnswerState("Yay You Did It!")
-//           setcardsState(cardsState.sort(() => Math.random() - 0.5))
-//         } else {
-//           if (scoreState > highScoreState) {
-//           setHighScoreState(scoreState)
-//           setAnswerState("You guessed incorrectly!")
-//           }
-//           cardsState.forEach(cards => {
-//           cards.count = 0;
-//           });
-//           alert(`Game Over :( \nscore: ${scoreState}`);
-      
-//           setScoreState(0)
-//           setcardsState(cardsState.sort(() => Math.random() - 0.5))
-//         }
-//         return true;
-//       }
-//     });
-//   }
-
-//     return (
-//       <wrapper>
-//         <Head answer={answerState} score={scoreState} highscore={highScoreState}>Clicky Click Scoreboard!</Head>
-//         {cardsState.map(Cards => (
-//           <Cards
-//             clickCount={clickCount}
-//             id={Cards.id}
-//             key={Cards.id}
-//             image={Cards.image}
-//           /> 
-//         ))}
-//       </wrapper>
-//     );
-  
-// }
-
-// export default App;
