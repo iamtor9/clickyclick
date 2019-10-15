@@ -1,0 +1,60 @@
+.navbar {
+    background: whitesmoke;
+    align-content: center;
+    min-height: 55px;
+    position: fixed;
+}
+
+.navbar li {
+    align-content: center;
+    text-align: center;
+    background:whitesmoke;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.Head {
+    align-content: center;
+}
+
+.Head h1, h3{
+    text-align: center;
+    background: black;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 55px;
+}
+
+h1,h2 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+
+}
+
+li {
+    color:black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+}
+
+.label {
+    text-align: center;
+    background: black;
+    font-size: large;
+   
+}
