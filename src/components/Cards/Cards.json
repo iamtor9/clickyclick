@@ -1,0 +1,74 @@
+Const CardsJ = [
+    {
+      "id": 1,
+      "name": "Img1",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 2,
+      "name": "Img2",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "name": "Img3",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 4,
+      "name": "Img4",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 5,
+      "name": "Img5",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 6,
+      "name": "Img6",
+      "image": "",
+      "count": 0
+    },
+    {
+      "id": 7,
+      "name": "Img7",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 8,
+      "name": "Img8",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 9,
+      "name": "Img9",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 10,
+      "name": "Img10",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 11,
+      "name": "Img11",
+      "image": " ",
+      "count": 0
+    },
+    {
+      "id": 12,
+      "name": "Img12",
+      "image": "",
+      "count": 0
+    }
+  ]

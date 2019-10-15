@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Cards from "./components/Cards/Cards"
 import Head from "./components/Head/Head";
 import Wrapper from "./components/Wrapper/Wrapper";
-// import Cards from "../src/Cards.json";
+//import CardsJ from "../src/components/Cards/Cards.json";
 
 class App extends Component {
   state = {
