@@ -1,6 +1,6 @@
-import React from "react";
-import "./wrapper.css";
+import React from "./node_modules/react";
+import "./Wrapper.css";
 
-const wrapper = props => <div className="wrapper">{props.children}</div>;
+const Wrapper = props => <div className="Wrapper">{props.children}</div>;
 
-export default wrapper;
+export default Wrapper;
