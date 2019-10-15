@@ -1,14 +1,10 @@
-  
-import React from "./node_modules/react";
-import "./Cards.css";
+// create imports for all js related files
+import React, { Component } from "react";
+import Cards from "./components/Cards/Cards"
+import Head from "./components/Head/Head";
+import Wrapper from "./components/Wrapper/Wrapper";
+//import CardsJ from "../src/components/Cards/Cards.json";
 
-import React, { useState } from "react";
-import ReactDOMServer from 'react-dom/server';
-import Cards from "./components/Cards";
-import Wrapper from "./components/Wrapper";
-import Head from "./components/Head";
-import Cards from "../src/Cards.json";
-import "./App.css";
 
 const Cards = props => (
 
