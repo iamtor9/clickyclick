@@ -1,5 +1,6 @@
 // create imports for all js related files
 import React, { useState } from "react";
+import ReactDOMServer from 'react-dom/server';
 import Cards from "./components/Cards";
 import wrapper from "./components/wrapper";
 import Head from "./components/Head";
