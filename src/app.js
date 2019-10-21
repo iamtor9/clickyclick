@@ -3,7 +3,7 @@ import React, { useState} from 'react';
 import cards from '../src/Cards.json';
 import Header from './components/Header/index';
 import Card from './components/Card/index';
-import Wrapper from './components/Wrapper/index';
+import Wrapper from './components/wrapper/index';
 // import './App.css';
 
 
@@ -28,11 +28,11 @@ function pageantCount(id) {
           setTopState(pointsState)
         }
         cardState.forEach(card => {
-          card.clicked = 0;  
+          card.clicked = 0;
         });
 
         //eslint-disable-next-line
-        alert('You got 1st runner up! \nscore: ${pointsState}');
+        alert(`You got 1st runner up! \nscore: ${pointsState}`);
         setPointsState(0)
         setCardState(cardState.sort(() => Math.random() - 0.5))
       }
